@@ -18,16 +18,17 @@ if (isset($_POST['Clave'])) {
                 $CLI_TELEFONO= $FilaResultado['CLI_TELEFONO'];
                 $CLI_EMAIL= $FilaResultado['CLI_EMAIL'];
                 $CLI_FECHA_REGISTRO= $FilaResultado['CLI_FECHA_REGISTRO'];
-                //array_push($DatosCliente, array("0"=> $CLI_TIPO_DOC, "1"=> $CLI_DOCUMENTO, "2"=> $CLI_NOMBRES, "3"=> $CLI_APELLIDOS, "4"=> $CLI_TELEFONO, "5"=> $CLI_EMAIL, "6"=> $CLI_FECHA_REGISTRO));
-                $ConsultaMascota= "SELECT MAS_TIPO, MAS_NOMBRE, MAS_GENERO FROM dbp_veterinaria.tbl_mascotas WHERE MAS_FKCLI_ID= '". $CodigoCliente ."' AND MAS_ESTADO= 'Activo';";
+                
+                $ConsultaMascota= "SELECT MAS_ID, MAS_TIPO, MAS_NOMBRE, MAS_GENERO FROM dbp_veterinaria.tbl_mascotas WHERE MAS_FKCLI_ID= '". $CodigoCliente ."' AND MAS_ESTADO= 'Activo';";
                 if ($ResultadoMascota= $ConexionSQL->query($ConsultaMascota)) {
                     $CantidadResultados= $ResultadoMascota->num_rows;
                     if ($CantidadResultados > 0) {
                         while($FilaResultado2= $ResultadoMascota->fetch_assoc()) {
+                            $MAS_ID= $FilaResultado2['MAS_ID'];
                             $MAS_TIPO= $FilaResultado2['MAS_TIPO'];
                             $MAS_NOMBRE= $FilaResultado2['MAS_NOMBRE'];
                             $MAS_GENERO= $FilaResultado2['MAS_GENERO'];
-                            array_push($DatosCliente, array("0"=> $CLI_TIPO_DOC, "1"=> $CLI_DOCUMENTO, "2"=> $CLI_NOMBRES, "3"=> $CLI_APELLIDOS, "4"=> $CLI_TELEFONO, "5"=> $CLI_EMAIL, "6"=> $CLI_FECHA_REGISTRO, "7"=> $MAS_TIPO, "8"=> $MAS_NOMBRE, "9"=> $MAS_GENERO));
+                            array_push($DatosCliente, array("0"=> $CLI_TIPO_DOC, "1"=> $CLI_DOCUMENTO, "2"=> $CLI_NOMBRES, "3"=> $CLI_APELLIDOS, "4"=> $CLI_TELEFONO, "5"=> $CLI_EMAIL, "6"=> $CLI_FECHA_REGISTRO, "7"=> $MAS_TIPO, "8"=> $MAS_NOMBRE, "9"=> $MAS_GENERO, "10"=> $MAS_ID));
                         }
                     }else{
                         //Sin Resultados

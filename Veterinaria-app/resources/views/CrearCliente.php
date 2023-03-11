@@ -59,7 +59,7 @@
                     <div class="row" style="margin-top: 2%;">
                         <div class="col-md-3">
                             <label class="form-label" for="InputTelefono">Teléfono</label>
-                            <input type="number" class="form-control" id="InputTelefono" placeholder="Teléfono"/>
+                            <input type="text" class="form-control" id="InputTelefono" placeholder="Teléfono" maxlength="10"/>
                         </div>
                         <div class="col-md-3">
                             <label class="form-label" for="InputEmail">Email</label>

@@ -43,7 +43,6 @@
                             <th>Genero</th>
                             <th>Nombre Propietario</th>
                             <th>Ver Detalles</th>
-                            <th>Actualizar</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -55,9 +54,6 @@
                                     if ($d == 4) {
                                         echo '<td style="position: relative;">
                                             <a class="btn btn-outline-info" onclick="VerInfoMascota(' . $DatosMascotas[$i][$d] .');"><i class="fa-solid fa-paw fa-beat" style="--fa-animation-duration: 2s;"></i></a>
-                                        </td>';
-                                        echo '<td style="position: relative;">
-                                            <a class="btn btn-outline-info" onclick="EditarInfoMascota(' . $DatosMascotas[$i][$d] .');"><i class="fas fa-edit"></i></a>
                                         </td>';
                                     } else {
                                         echo '<td class="text-white" style="text-align: center;">' . $DatosMascotas[$i][$d] . '</td>';

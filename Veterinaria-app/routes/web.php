@@ -20,13 +20,9 @@ Route::get('/Cerrar', function () {
     return view('Logout');
 });
 
-Route::post('/', function () {
-    return view('ListadoClientes');
+Route::get('/Citas', function () {
+    return view('ListadoCitas');
 });
 
-/*
-Route::match(['get', 'post'], 'ListadoClientes', function () {
-    return request('search');
-});*/
 
 ?>
