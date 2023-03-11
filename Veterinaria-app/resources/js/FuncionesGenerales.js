@@ -148,7 +148,7 @@ function ConsultarInfo(Clave) {
                 Swal.fire({
                     icon: 'error',
                     title: '¡Error Al Consultar Informacion!  🤨',
-                    text: 'Por Favor, Consultar Con El Desarrollador Del Sistema...',
+                    text: 'No Se Encontro Información En El Sistema...',
                     confirmButtonColor: '#2892DB'
                 })
             } else if (Respuesta == "Error") {

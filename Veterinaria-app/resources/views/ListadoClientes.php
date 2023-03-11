@@ -70,10 +70,8 @@
         </div>
     </section>
 
-
-    <!-- Button Modal Actualizar -->
-    <button type="button" id="btnVerDetalles" class="btn bg-black float-end text-white" data-bs-toggle="modal" data-bs-target="#ModalDetalles">Ver</button>
     <!--Modal Ver Detalles-->
+    <button type="button" id="btnVerDetalles" class="btn bg-black float-end text-white" data-bs-toggle="modal" data-bs-target="#ModalDetalles">Ver</button>
     <div class="modal fade" id="ModalDetalles" tabindex="-1" aria-labelledby="ModalDetallesLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -244,7 +242,6 @@
         </div>
     </div>
 
-    
     <!-- Modal Actualizar -->
     <div class="modal fade" id="ModalActualizar" tabindex="-1" role="dialog" aria-labelledby="ModalActualizarTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">

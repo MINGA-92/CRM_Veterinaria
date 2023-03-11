@@ -5,7 +5,7 @@
             <a class="nav-link text-info" href="./">👨🏽‍💼 Clientes</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link text-info" href="Mascotas">🐶 Mascotas</a>
+            <a class="nav-link text-info" href="Mascotas">🐇 Mascotas</a>
         </li>
         <li class="nav-item">
             <a class="nav-link text-info" href="Citas">📋 Mis Citas</a>
